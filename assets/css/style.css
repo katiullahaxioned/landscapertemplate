@@ -158,10 +158,6 @@ input[type] {
   left: 0;
 }
 
-.btn:hover {
-  background-color: var(--clr-grey3);
-}
-
 .section-title {
   padding-bottom: 20px;
   margin-bottom: 22px;
@@ -220,11 +216,6 @@ header h1 a {
   text-transform: capitalize;
 }
 
-header h1 a:hover {
-  color: var(--clr-green);
-  text-shadow: 0 0 1px var(--clr-grey1);
-}
-
 nav ul {
   display: flex;
   justify-content: center;
@@ -240,10 +231,6 @@ nav li a {
   font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
-}
-
-nav li a:hover {
-  color: var(--clr-green);
 }
 
 header .wrapper > div {
@@ -397,10 +384,6 @@ header .wrapper > div {
   cursor: pointer;
 }
 
-.welcome-right ul li:hover {
-  transform: translatey(-5px);
-}
-
 .welcome-right .welcome-li-content span {
   margin: 20px 0;
   color: var(--clr-grey3);
@@ -462,10 +445,6 @@ header .wrapper > div {
   text-align: center;
 }
 
-.services-list li:hover {
-  transform: translateY(-20px);
-}
-
 .services-list li figure {
   width: 198px;
   height: 198px;
@@ -524,11 +503,6 @@ header .wrapper > div {
 .gallery-control li:not(:first-child) .btn{
   background-color: var(--clr-grey1);
   color: var(--clr-grey3);
-}
-
-.gallery-control li .btn:hover {
-  background-color: var(--clr-green);
-  color: var(--clr-grey1);
 }
 
 .project-gallery .gallery-images {
@@ -655,11 +629,6 @@ header .wrapper > div {
   display: block;
 }
 
-.contact-details li a:hover {
-  color: var(--clr-green);
-  text-decoration: underline;
-}
-
 .contact-details li > span:first-child {
   padding: 10px 0;
   position: relative;
@@ -668,7 +637,7 @@ header .wrapper > div {
   text-transform: uppercase;
 }
 
-.contact-details li span:first-child::before {
+.contact-details li > span:first-child::before {
   content: '';
   width: 30.5%;
   height: 3px;
@@ -812,11 +781,6 @@ footer .footer-social-icon {
   content: '\f0d5';
 }
 
-.footer-social-icon a:hover {
-  background-color: var(--clr-green);
-  color: var(--clr-grey1);
-}
-
 footer p {
   margin-top: 47px;
   color: var(--clr-grey2);
@@ -827,21 +791,120 @@ footer p a {
   color: var(--clr-grey2);
 }
 
-footer p a:hover {
-  color: var(--clr-green);
-  text-decoration: underline;
-}
-
-
-
  /*=================================
   footer styling ends here
 =================================*/ 
 
 /*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
 
+/*media query for min-width: 1024px starts here*/
+@media only screen and (min-width: 1024px) {
 
+  .btn:hover {
+    background-color: var(--clr-grey3);
+  }
+
+  header h1 a:hover {
+    color: var(--clr-green);
+    text-shadow: 0 0 1px var(--clr-grey1);
+  }
+
+  nav li a:hover {
+    color: var(--clr-green);
+  }
+
+  .welcome-right ul li:hover {
+    transform: translatey(-5px);
+  }
+
+  .services-list li:hover {
+    transform: translateY(-20px);
+  }
+
+  .gallery-control li .btn:hover {
+    background-color: var(--clr-green);
+    color: var(--clr-grey1);
+  }
+
+  .contact-details li a:hover {
+    color: var(--clr-green);
+    text-decoration: underline;
+  }
+
+  .footer-social-icon a:hover {
+    background-color: var(--clr-green);
+    color: var(--clr-grey1);
+  }
+
+  footer p a:hover {
+    color: var(--clr-green);
+    text-decoration: underline;
+  }
 
 }  
+
+/*media query for max-width: 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+
+  /* welcome section start here */
+
+  .welcome .wrapper {
+    padding: 100px 0;
+  }
+
+  .welcome-left h3 {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+
+  /* welcome section ends here */
+
+  /* our services section start here */
+
+  .our-services .wrapper {
+    padding: 100px 0;
+  }
+
+  .our-services .services-list {
+    margin-top: 75px;
+  }
+
+  .services-list li {
+    align-self: flex-start;
+  }
+
+  /* our services section ends here */
+
+  /* project gallery section start here */
+
+  .project-gallery .wrapper {
+    padding: 100px 0;
+  }
+
+  /* project gallery section ends here */
+
+  /* testimonial section starts here */
+
+  .testimonials .wrapper {
+    width: 80%;
+    padding: 100px 0;
+  }
+
+  .user-comments {
+    margin: 30px 0 50px;
+  }
+
+  /* testimonial section ends here */
+
+  /* contact us section starts here */
+
+  .contact-us .wrapper {
+    padding: 100px 0;
+  }
+
+  .contact-us form {
+    width: 100%;
+  }
+
+  /* contact us section ends here */
+}
