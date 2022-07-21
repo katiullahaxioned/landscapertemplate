@@ -549,8 +549,64 @@ header .wrapper > div {
 /* testimonial section starts here */
 
 .testimonials {
-  background-color: #69ad30;
-  width: 100%;
+  background-color: var(--clr-green);
+}
+
+.testimonials .wrapper {
+  width: 67%;
+  padding: 115px 0 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--clr-grey1);
+}
+
+.testimonials .section-title::before {
+  background-color: var(--clr-grey1);
+}
+
+.user-comments li:not(:first-child) {
+  display: none;
+}
+
+.user-comments .user-comment::before,
+.user-comments .user-comment::after {
+  content: '"';
+}
+
+.user-comments {
+  margin: 47px 0 30px;
+}
+
+.user-comments li .user-comment {
+  line-height: 2;
+}
+
+.user-comments .user-name {
+  margin-top: 16px;
+}
+
+.testimonials-control {
+  /* margin-top: 30px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials-control span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 6px;
+  background-color: #accf86;
+  text-indent: -99999px;
+  cursor: pointer;
+}
+
+.testimonials-control span:first-child {
+  background-color: var(--clr-grey1);
 }
 
 /* testimonial section ends here */
