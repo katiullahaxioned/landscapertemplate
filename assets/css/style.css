@@ -391,6 +391,15 @@ header .wrapper > div {
   gap: 30px;
 }
 
+.welcome-right ul li {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.welcome-right ul li:hover {
+  transform: translatey(-5px);
+}
+
 .welcome-right .welcome-li-content span {
   margin: 20px 0;
   text-transform: capitalize;
@@ -444,6 +453,12 @@ header .wrapper > div {
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.services-list li:hover {
+  transform: translateY(-20px);
 }
 
 .services-list li figure {
@@ -468,7 +483,77 @@ header .wrapper > div {
   font-size: 15px;
 }
 
-/* our services section start here */
+/* our services section end here */
+
+/* project gallery section start here */
+
+.project-gallery .wrapper {
+  padding: 96px 0 113px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-gallery p {
+  font-size: 18px;
+  color: var(--clr-grey3)
+}
+
+.project-gallery .gallery-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-control li {
+  margin: 0 12px;
+}
+
+.gallery-control li .btn {
+  padding: 11px 13px;
+  margin: 56px 0 54px;
+  font-size: 15px;
+}
+
+.gallery-control li:not(:first-child) .btn{
+  background-color: var(--clr-grey1);
+  color: var(--clr-grey3);
+}
+
+.gallery-control li .btn:hover {
+  background-color: var(--clr-green);
+  color: var(--clr-grey1);
+}
+
+.project-gallery .gallery-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.gallery-images .gallery-image {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.gallery-image figure {
+  cursor: pointer;
+  box-shadow: 1px 1px 5px var(--clr-grey3);
+}
+
+/* project gallery section end here */
+
+/* testimonial section starts here */
+
+.testimonials {
+  background-color: #69ad30;
+  width: 100%;
+}
+
+/* testimonial section ends here */
 
 
 /*=================================
