@@ -168,6 +168,7 @@ input[type] {
   position: relative;
   font-size: 35px;
   font-weight: 600;
+  color: var(--clr-grey3);
 }
 
 .section-title:not(.welcome-left h3) {
@@ -430,6 +431,10 @@ header .wrapper > div {
   color: var(--clr-grey1);
 }
 
+.our-services .section-title {
+  color: var(--clr-grey1);
+}
+
 .our-services .section-title::before {
   background-color: var(--clr-grey1);
 }
@@ -563,6 +568,10 @@ header .wrapper > div {
   color: var(--clr-grey1);
 }
 
+.testimonials .section-title {
+  color: var(--clr-grey1);
+}
+
 .testimonials .section-title::before {
   background-color: var(--clr-grey1);
 }
@@ -611,6 +620,130 @@ header .wrapper > div {
 
 /* testimonial section ends here */
 
+/* contact us section starts here */
+
+.contact-us {
+  background-color: #f6f6f6;
+}
+
+.contact-us .wrapper {
+  padding: 103px 0 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us p {
+  color: var(--clr-grey3);
+  font-size: 18px;
+}
+
+.contact-us .contact-details {
+  margin: 76px 0 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-details li {
+  margin: 0 45px;
+}
+
+.contact-details li span,
+.contact-details li a {
+  display: block;
+}
+
+.contact-details li a:hover {
+  text-decoration: underline;
+  color: var(--clr-green);
+}
+
+.contact-details li > span:first-child {
+  padding: 10px 0;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--clr-grey3);
+}
+
+.contact-details li span:first-child::before {
+  content: '';
+  width: 30.5%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--clr-grey1);
+}
+
+.contact-details li span:not(:first-child),
+.contact-details li a {
+  color: var(--clr-grey2);
+  font-size: 15px;
+}
+
+.contact-details li span:nth-child(2),
+.contact-details li a:nth-child(2) {
+  margin: 20px 0 15px;
+}
+
+.contact-us h4 {
+  margin-bottom: 37px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--clr-grey3);
+}
+
+.contact-us form {
+  width: 64%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-us form div:nth-child(1),
+.contact-us form div:nth-child(2) {
+  margin-bottom: 15px;
+  flex-basis: 48%;
+}
+
+.contact-us form div:nth-child(3),
+.contact-us form div:nth-child(4) {
+  flex: 1 0 100%;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid var(--clr-grey1);
+  background-color: var(--clr-white);
+}
+
+::placeholder {
+font-size: 16px;
+}
+
+.input-group textarea {
+  min-height: 125px;
+  padding: 21px 20px;
+}
+
+.input-control {
+  margin-top: 29px;
+  text-align: center;
+}
+
+.input-control input {
+  border: none;
+}
+
+/* contact us section end here */
 
 /*=================================
   main styling ends here
@@ -620,7 +753,9 @@ header .wrapper > div {
   footer styling starts here
 =================================*/ 
 
-
+footer {
+  background-color: var(--clr-grey3);
+}
 
 
 
