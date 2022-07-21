@@ -99,8 +99,8 @@ body {
 
 a { 
   display: inline-block;
-  text-decoration: none;
   transition: all 0.3s;
+  text-decoration: none;
 }
 
 li {
@@ -139,8 +139,8 @@ input[type] {
   padding: 16px 19px;
   border-radius: 4px;
   position: relative;
-  background-color: var(--clr-green);
   color: var(--clr-grey1);
+  background-color: var(--clr-green);
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -166,9 +166,9 @@ input[type] {
   padding-bottom: 20px;
   margin-bottom: 22px;
   position: relative;
+  color: var(--clr-grey3);
   font-size: 35px;
   font-weight: 600;
-  color: var(--clr-grey3);
 }
 
 .section-title:not(.welcome-left h3) {
@@ -216,8 +216,8 @@ header h1 a {
   color: var(--clr-grey1);
   font-size: 25px;
   font-weight: 500;
-  text-transform: capitalize;
   letter-spacing: 1px;
+  text-transform: capitalize;
 }
 
 header h1 a:hover {
@@ -256,9 +256,9 @@ header .wrapper > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   overflow: hidden;
   transition: all 0.3s;
-  align-items: center;
   cursor: pointer;
 }
 
@@ -322,8 +322,8 @@ header .wrapper > div {
   top: 57.9%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   color: var(--clr-grey1);
+  text-align: center;
 }
 
 .banner-content h2 {
@@ -371,8 +371,8 @@ header .wrapper > div {
 
 .welcome-left p {
   margin-bottom: 22px;
-  font-size: 15px;
   color: var(--clr-grey2);
+  font-size: 15px;
 }
 
 .welcome-left .btn {
@@ -393,8 +393,8 @@ header .wrapper > div {
 }
 
 .welcome-right ul li {
-  cursor: pointer;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .welcome-right ul li:hover {
@@ -403,15 +403,15 @@ header .wrapper > div {
 
 .welcome-right .welcome-li-content span {
   margin: 20px 0;
-  text-transform: capitalize;
+  color: var(--clr-grey3);
   font-size: 21px;
   font-weight: 600;
-  color: var(--clr-grey3);
+  text-transform: capitalize;
 }
 
 .welcome-right .welcome-li-content p {
-  font-size: 15px;
   color: var(--clr-grey2);
+  font-size: 15px;
 }
 
 /* welcome section end here */
@@ -457,9 +457,9 @@ header .wrapper > div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   transition: all 0.3s;
   cursor: pointer;
+  text-align: center;
 }
 
 .services-list li:hover {
@@ -480,8 +480,8 @@ header .wrapper > div {
 
 .services-li-content span {
   margin: 31px 0 10px;
-  text-transform: capitalize;
   font-size: 24px;
+  text-transform: capitalize;
 }
 
 .services-li-content p {
@@ -501,8 +501,8 @@ header .wrapper > div {
 }
 
 .project-gallery p {
-  font-size: 18px;
   color: var(--clr-grey3)
+  font-size: 18px;
 }
 
 .project-gallery .gallery-control {
@@ -545,8 +545,8 @@ header .wrapper > div {
 }
 
 .gallery-image figure {
-  cursor: pointer;
   box-shadow: 1px 1px 5px var(--clr-grey3);
+  cursor: pointer;
 }
 
 /* project gallery section end here */
@@ -564,8 +564,8 @@ header .wrapper > div {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   color: var(--clr-grey1);
+  text-align: center;
 }
 
 .testimonials .section-title {
@@ -598,7 +598,6 @@ header .wrapper > div {
 }
 
 .testimonials-control {
-  /* margin-top: 30px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -610,8 +609,8 @@ header .wrapper > div {
   border-radius: 50%;
   margin: 0 6px;
   background-color: #accf86;
-  text-indent: -99999px;
   cursor: pointer;
+  text-indent: -99999px;
 }
 
 .testimonials-control span:first-child {
@@ -657,16 +656,16 @@ header .wrapper > div {
 }
 
 .contact-details li a:hover {
-  text-decoration: underline;
   color: var(--clr-green);
+  text-decoration: underline;
 }
 
 .contact-details li > span:first-child {
   padding: 10px 0;
   position: relative;
-  text-transform: uppercase;
-  font-weight: 600;
   color: var(--clr-grey3);
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .contact-details li span:first-child::before {
@@ -693,10 +692,10 @@ header .wrapper > div {
 
 .contact-us h4 {
   margin-bottom: 37px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 15px;
   color: var(--clr-grey3);
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .contact-us form {
@@ -732,6 +731,8 @@ font-size: 16px;
 .input-group textarea {
   min-height: 125px;
   padding: 21px 20px;
+  resize: vertical;
+  outline: none;
 }
 
 .input-control {
@@ -757,7 +758,79 @@ footer {
   background-color: var(--clr-grey3);
 }
 
+footer .wrapper {
+  padding: 39px 0 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+footer .footer-social-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-icon a {
+  width: 38px;
+  height: 38px;
+  margin: 0 21px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #464646;
+  color: var(--clr-green);
+  font-size: 20px;
+  text-indent: -99999px;
+}
+
+.footer-social-icon li a::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer-social-icon li:nth-child(1) a::before,
+.footer-social-icon li:nth-child(2) a::before,
+.footer-social-icon li:nth-child(3) a::before {
+  font-family: 'fontAwesome';
+  text-indent: 0;
+}
+
+.footer-social-icon li:nth-child(1) a::before {
+  content: '\f09a';
+
+}
+
+.footer-social-icon li:nth-child(2) a::before {
+  content: '\f099';
+}
+
+.footer-social-icon li:nth-child(3) a::before {
+  content: '\f0d5';
+}
+
+.footer-social-icon a:hover {
+  background-color: var(--clr-green);
+  color: var(--clr-grey1);
+}
+
+footer p {
+  margin-top: 47px;
+  color: var(--clr-grey2);
+  font-size: 15px;
+}
+
+footer p a {
+  color: var(--clr-grey2);
+}
+
+footer p a:hover {
+  color: var(--clr-green);
+  text-decoration: underline;
+}
 
 
 
