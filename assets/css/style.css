@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @charset "utf-8";
 /* ==========================================================================
    1. CSS Reset Code
@@ -224,7 +231,6 @@ span {
 }
 
 p { line-height: 1.5; }
-
 p::first-letter { text-transform: uppercase; }
 
 input[type] {
@@ -439,8 +445,8 @@ nav li a {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(105, 173, 48, 0.8)), to(rgba(105, 173, 48, 0.8)));
   background-image: -o-linear-gradient(left, rgba(105, 173, 48, 0.8), rgba(105, 173, 48, 0.8));
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(105, 173, 48, 0.8)), to(rgba(105, 173, 48, 0.8)));
   background-image: linear-gradient(to right, rgba(105, 173, 48, 0.8), rgba(105, 173, 48, 0.8));
 }
 
@@ -495,7 +501,6 @@ nav li a {
 }
 
 .welcome-left h3 { margin-bottom: 40px; }
-
 .welcome-left h3 span { color: var(--clr-green); }
 
 .welcome-left p {
@@ -572,7 +577,6 @@ nav li a {
 }
 
 .our-services .section-title { color: var(--clr-grey1); }
-
 .our-services .section-title::before { background-color: var(--clr-grey1); }
 
 .our-services .services-list {
@@ -630,7 +634,7 @@ nav li a {
   text-transform: capitalize;
 }
 
-.services-li-content p { 
+.services-li-content p {
   font-size: 15px;
   line-height: 1.4;
 }
@@ -694,18 +698,24 @@ nav li a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 30px;
 }
 
 .gallery-images .gallery-image {
+  -ms-flex-preferred-size: 31.5%;
   flex-basis: 31.5%;
   overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
   cursor: pointer;
 }
 
 .gallery-image img {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -713,9 +723,10 @@ nav li a {
 
 /* testimonial section starts here */
 
-.testimonials { 
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(105, 173, 48, 0.8)), to(rgba(105, 173, 48, 0.8)));
+.testimonials {
   background-image: -o-linear-gradient(left, rgba(105, 173, 48, 0.8), rgba(105, 173, 48, 0.8));
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(105, 173, 48, 0.8)), to(rgba(105, 173, 48, 0.8))), url('../images/testimonial.png');
+  background-image: -o-linear-gradient(left, rgba(105, 173, 48, 0.8), rgba(105, 173, 48, 0.8)), url('../images/testimonial.png');
   background-image: linear-gradient(to right, rgba(105, 173, 48, 0.8), rgba(105, 173, 48, 0.8)), url('../images/testimonial.png');
   background-position: center;
   background-size: cover;
@@ -742,9 +753,7 @@ nav li a {
 }
 
 .testimonials .section-title { color: var(--clr-grey1); }
-
 .testimonials .section-title::before { background-color: var(--clr-grey1); }
-
 .user-comments li:not(:first-child) { display: none; }
 
 .user-comments .user-comment::before,
@@ -753,11 +762,8 @@ nav li a {
 }
 
 .user-comments { margin: 47px 0 30px; }
-
 .user-comments li .user-comment { line-height: 2; }
-
 .user-comments .user-name { margin-top: 16px; }
-
 .user-comments .user-name::before { content: '-'; }
 
 .testimonials-control {
@@ -830,7 +836,7 @@ nav li a {
   display: block;
 }
 
-.contact-details li > span:first-child {
+.contact-details li>span:first-child {
   padding: 10px 0;
   margin-bottom: 20px;
   position: relative;
@@ -839,7 +845,7 @@ nav li a {
   text-transform: uppercase;
 }
 
-.contact-details li > span:first-child::before {
+.contact-details li>span:first-child::before {
   content: '';
   width: 30.5%;
   height: 3px;
@@ -1017,9 +1023,7 @@ footer .footer-social-icon {
 }
 
 .footer-social-icon li:nth-child(1) a::before { content: '\f09a'; }
-
 .footer-social-icon li:nth-child(2) a::before { content: '\f099'; }
-
 .footer-social-icon li:nth-child(3) a::before { content: '\f0d5'; }
 
 footer p {
@@ -1042,18 +1046,13 @@ footer p a { color: var(--clr-grey2); }
   .btn:hover { background-color: var(--clr-grey3); }
 
   header a:hover img {
+    -webkit-box-shadow: 0 0 3px var(--clr-grey1);
     box-shadow: 0 0 3px var(--clr-grey1);
   }
 
   nav li a:hover { color: var(--clr-green); }
-
-  .welcome-li-content h4 a:hover {
-    color: var(--clr-green);
-  }
-
-  .services-li-content h4 a:hover {
-    color: var(--clr-grey3);
-  }
+  .welcome-li-content h4 a:hover { color: var(--clr-green); }
+  .services-li-content h4 a:hover { color: var(--clr-grey3); }
 
   .gallery-control li .btn:hover {
     background-color: var(--clr-green);
@@ -1061,6 +1060,8 @@ footer p a { color: var(--clr-grey2); }
   }
 
   .gallery-images .gallery-image:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
   }
 
@@ -1084,17 +1085,27 @@ footer p a { color: var(--clr-grey2); }
 /*media query for max-width: 1024px starts here*/
 @media only screen and (max-width: 1024px) {
 
+  /* common styling starts here */
+
+  .welcome .wrapper,
+  .contact-us .wrapper,
+  .our-services .wrapper,
+  .testimonials .wrapper,
+  .project-gallery .wrapper {
+    padding: 100px 0;
+  }
+
+  /* common styling ends here */
+
   /* banner section starts here */
 
   .banner-content h2 { font-size: 46px; }
-
   .banner-content p { font-size: 18px; }
 
   /* banner section ends here */
 
   /* welcome section starts here */
 
-  .welcome .wrapper { padding: 100px 0; }
 
   .welcome-left h3 {
     margin-bottom: 12px;
@@ -1102,14 +1113,11 @@ footer p a { color: var(--clr-grey2); }
   }
 
   .welcome-left p { margin-bottom: 15px; }
-
   .welcome-left .btn { margin-top: 9px; }
 
   /* welcome section ends here */
 
   /* our services section starts here */
-
-  .our-services .wrapper { padding: 100px 0; }
 
   .our-services .services-list { margin-top: 75px; }
 
@@ -1122,26 +1130,20 @@ footer p a { color: var(--clr-grey2); }
 
   /* our services section ends here */
 
-  /* project gallery section start here */
+  /* project gallery section starts here */
 
-  .project-gallery .wrapper { padding: 100px 0; }
+  .project-gallery .gallery-images { gap: 20px; }
 
   /* project gallery section ends here */
 
   /* testimonial section starts here */
 
-  .testimonials .wrapper {
-    width: 80%;
-    padding: 100px 0;
-  }
-
+  .testimonials .wrapper { width: 80%; }
   .user-comments { margin: 30px 0 50px; }
 
   /* testimonial section ends here */
 
   /* contact us section starts here */
-
-  .contact-us .wrapper { padding: 100px 0; }
 
   .contact-us form { width: 100%; }
 
@@ -1156,9 +1158,7 @@ footer p a { color: var(--clr-grey2); }
   /* welcome section starts here */
 
   .welcome-left h3 { font-size: 28px; }
-
   .welcome-left p { margin-bottom: 20px; }
-
   .welcome-left .btn { margin-top: 20px; }
 
   /* welcome section ends here */
@@ -1185,8 +1185,8 @@ footer p a { color: var(--clr-grey2); }
 
 }
 
-/*media query for max-width: 768px starts here*/
-@media only screen and (max-width: 768px) {
+/*media query for max-width: 767px starts here*/
+@media only screen and (max-width: 767px) {
 
   .wrapper { width: 95%; }
 
@@ -1198,8 +1198,14 @@ footer p a { color: var(--clr-grey2); }
 
   /* header styling starts here */
 
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+  }
+
   nav {
-    width: 60%;
+    width: 100%;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -1218,18 +1224,17 @@ footer p a { color: var(--clr-grey2); }
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    top: 15%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   nav li {
     padding: 5px;
-    margin: 0 0 20px 20px;
+    margin: 10px 0;
   }
 
   nav li a {
@@ -1242,7 +1247,7 @@ footer p a { color: var(--clr-grey2); }
     z-index: 12;
   }
 
-  .menu-toggle:hover ~ nav { left: 0; }
+  .menu-toggle:hover~nav { left: 0; }
 
   /* header styling ends here */
 
@@ -1264,7 +1269,6 @@ footer p a { color: var(--clr-grey2); }
   }
 
   .banner-content p { font-size: 18px; }
-
   .banner-content a { margin-top: 40px; }
 
   /* banner section ends here */
@@ -1295,11 +1299,11 @@ footer p a { color: var(--clr-grey2); }
   .our-services .services-list {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 0;
   }
 
   .services-list li {
-    padding: 0 5px;
+    padding: 20px;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
   }
@@ -1309,8 +1313,7 @@ footer p a { color: var(--clr-grey2); }
     height: 15%;
   }
 
-  .services-li-content span { font-size: 20px; }
-
+  .services-li-content h4 a { font-size: 20px; }
   .services-list li:nth-child(odd) p { margin-top: 0; }
 
   /* our services section ends here */
@@ -1318,21 +1321,11 @@ footer p a { color: var(--clr-grey2); }
   /* project gallery section starts here */
 
   .gallery-control li .btn { font-size: 14px; }
-
-  .project-gallery .gallery-images {
-    width: 100%;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
+  .project-gallery .gallery-images { width: 100%; }
 
   .gallery-images .gallery-image {
-    width: 70%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 70%;
+    flex-basis: 70%;
   }
 
   /* project gallery section ends here */
@@ -1340,6 +1333,7 @@ footer p a { color: var(--clr-grey2); }
   /* contact us section starts here */
 
   .contact-us .contact-details {
+    margin: 50px 0 70px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1376,7 +1370,6 @@ footer p a { color: var(--clr-grey2); }
   /* banner section starts here */
 
   .banner-content h2 { font-size: 28px; }
-
   .banner-content p { font-size: 16px; }
 
   /* banner section ends here */
@@ -1419,7 +1412,10 @@ footer p a { color: var(--clr-grey2); }
 
   /* project gallery section starts here */
 
-  .project-gallery .gallery-image { width: 90%; }
+  .project-gallery .gallery-image {
+    -ms-flex-preferred-size: 85%;
+    flex-basis: 85%;
+  }
 
   .project-gallery .gallery-control {
     -webkit-box-orient: vertical;
