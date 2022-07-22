@@ -495,18 +495,16 @@ nav li a {
 }
 
 .project-gallery .gallery-control {
+  margin: 55px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.gallery-control li {
-  margin: 0 12px;
+  flex-wrap: wrap;
+  gap: 23px;
 }
 
 .gallery-control li .btn {
   padding: 11px 13px;
-  margin: 56px 0 54px;
   font-size: 15px;
 }
 
@@ -1121,8 +1119,8 @@ footer p a {
 
   /* project gallery section starts here */
 
-  .gallery-control li {
-    margin: 0 5px;
+  .gallery-control li .btn {
+    font-size: 14px;
   }
 
   .project-gallery .gallery-images {
@@ -1159,6 +1157,65 @@ footer p a {
 }
 
 /*media query for min-width: 540px starts here*/
-@media only screen and (min-width: 540px) {
+@media only screen and (max-width: 540px) {
+
+  .section-title,
+  .welcome-left h3 {
+    font-size: 28px;
+  }
+
+  /* banner section starts here */
+
+  .banner-content h2 {
+    font-size: 28px;
+  }
+
+  .banner-content p {
+    font-size: 16px;
+  }
+
+  /* banner section ends here */
+
+  /* welcome section starts here */
+
+  .welcome .wrapper {
+    text-align: center;
+  }
+
+  .welcome-left h3::before {
+    width: 31%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .welcome-right ul {
+    flex-wrap: wrap;
+  }
+
+  .welcome-right ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 100%;
+  }
+
+  .welcome-right li figure {
+    width: 55%;
+  }
+
+  /* welcome section ends here */
+
+  /* project gallery section starts here */
+
+  .project-gallery .gallery-image {
+    width: 90%;
+  }
+
+
+  .project-gallery .gallery-control {
+    flex-direction: column;
+  }
+
+  /* project gallery section ends here */
 
 }
