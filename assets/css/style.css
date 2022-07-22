@@ -82,7 +82,7 @@ sub { bottom: -.25em; }
 .cf:after { clear: both; }
 .cf { *zoom: 1; }
 
-/*for all*/
+/**** common styling start here ****/
 
 *,
 *::before,
@@ -187,6 +187,15 @@ input[type] {
   transform: translateX(-50%);
 }
 
+.our-services p,
+.project-gallery p,
+.contact-us p {
+  font-size: 18px;
+  text-align: center;
+}
+
+/**** common styling ends here ****/
+
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
@@ -199,6 +208,7 @@ input[type] {
 
 header {
   background-color: var(--clr-grey3);
+  position: relative;
 }
 
 header .wrapper {
@@ -206,6 +216,7 @@ header .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 header h1 a {
@@ -220,6 +231,7 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 nav li {
@@ -233,18 +245,12 @@ nav li a {
   text-transform: uppercase;
 }
 
-header .wrapper > div {
-  display: none;
-}
-
 .menu-toggle {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  width: 32px;
+  height: 32px;
+  display: none;
   overflow: hidden;
+  position: relative;
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -252,26 +258,35 @@ header .wrapper > div {
 .menu-toggle .bar {
   width: 100%;
   height: 4px;
+  position: absolute;
   border-radius: 5px;
   transition: all 0.3s;
-  background-color: var(--clr-grey3);
+  background-color: var(--clr-grey1);
   text-indent: -99999px;
 }
 
 .menu-toggle .bar:nth-child(2) {
   width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-toggle .bar:nth-child(3) {
+  bottom: 0;
+  left: 0;
 }
 
 .menu-toggle:hover .bar:nth-child(2) {
-  transform: translateX(-40px);
+  transform: translateX(-100px);
 }
 
 .menu-toggle:hover .bar:first-child {
-  transform: rotate(45deg) translate(9px, 9px);
+  transform: rotate(45deg) translate(10px, 9px);
 }
 
 .menu-toggle:hover .bar:last-child {
-  transform: rotate(-45deg) translate(9px, -9px);
+  transform: rotate(-45deg) translate(10px, -9px);
 }
 
 /*=================================
@@ -422,10 +437,6 @@ header .wrapper > div {
   background-color: var(--clr-grey1);
 }
 
-.our-services p {
-  font-size: 18px;
-}
-
 .our-services .services-list {
   margin-top: 95px;
   display: flex;
@@ -480,8 +491,7 @@ header .wrapper > div {
 }
 
 .project-gallery p {
-  color: var(--clr-grey3)
-  font-size: 18px;
+  color: var(--clr-grey3);
 }
 
 .project-gallery .gallery-control {
@@ -609,7 +619,6 @@ header .wrapper > div {
 
 .contact-us p {
   color: var(--clr-grey3);
-  font-size: 18px;
 }
 
 .contact-us .contact-details {
@@ -691,10 +700,12 @@ header .wrapper > div {
   padding: 12px 20px;
   border: 1px solid var(--clr-grey1);
   background-color: var(--clr-white);
+  font-size: 16px;
 }
 
 ::placeholder {
 font-size: 16px;
+text-transform: capitalize;
 }
 
 .input-group textarea {
@@ -846,20 +857,40 @@ footer p a {
 /*media query for max-width: 1024px starts here*/
 @media only screen and (max-width: 1024px) {
 
-  /* welcome section start here */
+  /* banner section starts here */
+
+  .banner-content h2 {
+    font-size: 46px;
+  }
+
+  .banner-content p {
+    font-size: 18px;
+  }
+
+  /* banner section ends here */
+
+  /* welcome section starts here */
 
   .welcome .wrapper {
     padding: 100px 0;
   }
 
   .welcome-left h3 {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-size: 32px;
+  }
+
+  .welcome-left p {
+    margin-bottom: 15px;
+  }
+
+  .welcome-left .btn {
+    margin-top: 9px;
   }
 
   /* welcome section ends here */
 
-  /* our services section start here */
+  /* our services section starts here */
 
   .our-services .wrapper {
     padding: 100px 0;
@@ -871,6 +902,10 @@ footer p a {
 
   .services-list li {
     align-self: flex-start;
+  }
+
+  .services-list li:nth-child(odd) p {
+    margin-top: 28px;
   }
 
   /* our services section ends here */
@@ -907,4 +942,223 @@ footer p a {
   }
 
   /* contact us section ends here */
+}
+
+/*media query for max-width: 995px starts here*/
+@media only screen and (max-width: 995px) {
+
+  .wrapper {
+    width: 92%;
+  }
+
+  /* welcome section starts here */
+
+  .welcome-left h3 {
+    font-size: 28px;
+  }
+
+  .welcome-left p {
+    margin-bottom: 20px;
+  }
+
+  .welcome-left .btn {
+    margin-top: 20px;
+  }
+
+  /* welcome section ends here */
+
+  /* our services section starts here */
+
+  .services-list li figure {
+    width: 93.5%;
+    height: 20%;
+  }
+
+  .services-list li:nth-child(odd) p {
+    margin-top: 26px;
+  }
+
+  /* our services section ends here */
+
+  /* contact us section starts here */
+
+  .contact-details li span:not(:first-child),
+  .contact-details li a {
+    font-size: 14px;
+  }
+
+  /* contact us section ends here */
+
+}
+
+/*media query for max-width: 768px starts here*/
+@media only screen and (max-width: 768px) {
+
+  .wrapper {
+    width: 95%;
+  }
+
+  .our-services p,
+  .project-gallery p,
+  .contact-us p {
+    font-size: 15px;
+  }
+
+  /* header styling starts here */
+
+  nav {
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 10;
+    transition: all 0.3s;
+    background-color: #69ad30;
+  }
+
+  nav ul {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    top: 15%;
+  }
+
+  nav li {
+    padding: 5px;
+    margin: 0 0 20px 20px;
+  }
+
+  nav li a {
+    color: var(--clr-grey1);
+    font-size: 18px;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 12;
+  }
+
+  .menu-toggle:hover ~ nav {
+    left: 0;
+  }
+
+  /* header styling ends here */
+
+  /* banner section starts here */
+
+  .banner figure {
+    height: 100vh;
+  }
+
+  .banner figure img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .banner .banner-content {
+    top: 50%;
+  }
+
+  .banner-content h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+  }
+  
+  .banner-content p {
+    font-size: 18px;
+  }
+  
+  .banner-content a {
+    margin-top: 40px;
+  }
+
+  /* banner section ends here */
+
+  /* welcome section starts here */
+
+  .welcome .wrapper {
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .welcome-left,
+  .welcome-right {
+    flex-basis: 100%;
+  }
+
+  /* welcome section ends here */
+
+  /* our services section starts here */
+
+  .our-services .services-list {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .services-list li {
+    padding: 0 5px;
+    flex-basis: 100%;
+  }
+
+  .services-list li figure {
+    width: 30%;
+    height: 15%;
+  }
+
+  .services-li-content span {
+    font-size: 20px;
+  }
+
+  .services-list li:nth-child(odd) p {
+    margin-top: 0;
+  }
+
+  /* our services section ends here */
+
+  /* project gallery section starts here */
+
+  .gallery-control li {
+    margin: 0 5px;
+  }
+
+  .project-gallery .gallery-images {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  
+  .gallery-images .gallery-image {
+    width: 70%;
+    flex-basis: 100%;
+  }
+
+  /* project gallery section ends here */
+
+  /* contact us section starts here */
+
+  .contact-us .contact-details {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .contact-us form {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-us form div:nth-child(1),
+  .contact-us form div:nth-child(2) {
+    flex-basis: 100%;
+}
+
+  /* contact us section ends here */
+}
+
+/*media query for min-width: 540px starts here*/
+@media only screen and (min-width: 540px) {
+
 }
