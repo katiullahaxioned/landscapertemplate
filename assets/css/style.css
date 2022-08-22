@@ -678,14 +678,16 @@ nav li a {
   gap: 23px;
 }
 
-.gallery-control li .btn {
+.gallery-control .btn {
   padding: 11px 13px;
   font-size: 15px;
+  color: var(--clr-grey3);
+  background-color: var(--clr-grey1);
 }
 
-.gallery-control li:not(:first-child) .btn {
-  background-color: var(--clr-grey1);
-  color: var(--clr-grey3);
+.gallery-control .btn.btn-active {
+  background-color: var(--clr-green);
+  color: var(--clr-grey1);
 }
 
 .project-gallery .gallery-images {
@@ -701,11 +703,11 @@ nav li a {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 30px;
+  position: relative;
 }
 
 .gallery-images .gallery-image {
-  -ms-flex-preferred-size: 31.5%;
-  flex-basis: 31.5%;
+  position: relative;
   overflow: hidden;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -713,10 +715,40 @@ nav li a {
   cursor: pointer;
 }
 
+.gallery-images .gallery-image.display-none { display: none; }
+
+.gallery-images .gallery-image.gallery-anime {
+  -webkit-animation: anime .3s linear forwards;
+  animation: anime .3s linear forwards;
+}
+
+@keyframes anime {
+  0% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
 .gallery-image img {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.gallery-image span {
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  color: var(--clr-white);
+  text-transform: capitalize;
 }
 
 /* project gallery section end here */
@@ -1324,8 +1356,8 @@ footer p a { color: var(--clr-grey2); }
   .project-gallery .gallery-images { width: 100%; }
 
   .gallery-images .gallery-image {
-    -ms-flex-preferred-size: 70%;
-    flex-basis: 70%;
+    -ms-flex-preferred-size: 85%;
+    flex-basis: 85%;
   }
 
   /* project gallery section ends here */
@@ -1411,11 +1443,6 @@ footer p a { color: var(--clr-grey2); }
   /* welcome section ends here */
 
   /* project gallery section starts here */
-
-  .project-gallery .gallery-image {
-    -ms-flex-preferred-size: 85%;
-    flex-basis: 85%;
-  }
 
   .project-gallery .gallery-control {
     -webkit-box-orient: vertical;
